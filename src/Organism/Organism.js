@@ -316,7 +316,7 @@ class Organism {
             }
         }
 
-        if (gravity && Math.random() * 100 <= this.anatomy.cells.length * Hyperparams.gravity) {
+        if (gravity && Math.random() * 100 <= (Hyperparams.realGravity ? 1 : this.anatomy.cells.length) * Hyperparams.gravity) {
             this.attemptChangePosition(this.c, this.r + 1);
         }
 

@@ -42,7 +42,7 @@ class WorldEnvironment extends Environment{
         const old_foods = new Set(this.foods);
         if (gravity) {
             for (let food of old_foods) {
-                if (Math.random() * 100 <= 2 * Hyperparams.gravity) {
+                if (Math.random() * 100 <= (Hyperparams.realGravity ? 1 : 2) * Hyperparams.gravity) {
                     const c = food.col;
                     const r = food.row;
                     if (this.grid_map.isValidLoc(c, r+1) && this.grid_map.cellAt(c, r+1).state === CellStates.empty) {
