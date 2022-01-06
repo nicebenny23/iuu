@@ -6,6 +6,7 @@ const Hyperparams = {
         this.foodProdProb = 5;
         this.vertExtCoef = 0;
         this.gravity = 0;
+        this.realGravity = false;
         this.killableNeighbors = Neighbors.adjacent;
         this.edibleNeighbors = Neighbors.adjacent;
         this.growableNeighbors = Neighbors.adjacent;
