@@ -6,11 +6,8 @@ const Hyperparams = {
         this.foodProdProb = 5;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         this.vertExtCoef = 0;
         this.gravity = 0;
-=======
->>>>>>> parent of a2955f1 (lightness)
 =======
 >>>>>>> parent of a2955f1 (lightness)
 =======

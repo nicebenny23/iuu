@@ -214,15 +214,12 @@ class ControlPanel {
         }.bind(this));
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         $('#vert-ext-coef').change(function() {
             Hyperparams.vertExtCoef = $('#vert-ext-coef').val();
         }.bind(this));
         $('#gravity').change(function() {
             Hyperparams.gravity = $('#gravity').val();
         }.bind(this));
-=======
->>>>>>> parent of a2955f1 (lightness)
 =======
 >>>>>>> parent of a2955f1 (lightness)
 =======
@@ -320,11 +317,8 @@ class ControlPanel {
         $('#food-prod-prob').val(Hyperparams.foodProdProb);
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         $('#vert-ext-coef').val(Hyperparams.vertExtCoef);
         $('#gravity').val(Hyperparams.gravity);
-=======
->>>>>>> parent of a2955f1 (lightness)
 =======
 >>>>>>> parent of a2955f1 (lightness)
 =======
