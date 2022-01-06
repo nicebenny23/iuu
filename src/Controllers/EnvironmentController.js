@@ -202,9 +202,6 @@ class EnvironmentController extends CanvasController{
                 continue;
             }
             this.env.changeCell(c, r, state, null);
-            if (state === CellStates.food) {
-                this.env.foods.add(cell)
-            }
         }
     }
 

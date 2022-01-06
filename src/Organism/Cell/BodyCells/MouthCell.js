@@ -22,7 +22,6 @@ class MouthCell extends BodyCell{
             return;
         if (n_cell.state == CellStates.food){
             env.changeCell(n_cell.col, n_cell.row, CellStates.empty, null);
-            env.foods.delete(env.grid_map.cellAt(n_cell.col, n_cell.row));
             this.org.food_collected++;
         }
     }
