@@ -4,11 +4,8 @@ const Hyperparams = {
     setDefaults: function() {
         this.lifespanMultiplier = 100;
         this.foodProdProb = 5;
-<<<<<<< HEAD
         this.vertExtCoef = 0;
         this.gravity = 0;
-=======
->>>>>>> parent of a2955f1 (lightness)
         this.killableNeighbors = Neighbors.adjacent;
         this.edibleNeighbors = Neighbors.adjacent;
         this.growableNeighbors = Neighbors.adjacent;
