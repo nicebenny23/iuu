@@ -28,6 +28,17 @@ class WorldEnvironment extends Environment{
     }
 
     update() {
+        if (Hyperparams.alterCurrent) {
+            if (Math.random() * 1000 <= 1) {
+                Hyperparams.current *= -1;
+            }
+            if (Math.random() * 100 <= 1) {
+                Hyperparams.current--;
+            }
+            if (Math.random() * 100 <= 1) {
+                Hyperparams.current++;
+            }
+        }
         var to_remove = [];
         for (var i in this.organisms) {
             var org = this.organisms[i];
@@ -40,16 +51,25 @@ class WorldEnvironment extends Environment{
         }
         this.removeOrganisms(to_remove);
         const old_foods = new Set(this.foods);
-        if (gravity) {
+        if (Hyperparams.gravity) {
             for (let food of old_foods) {
+                const c = food.col;
+                const r = food.row;
                 if (Math.random() * 100 <= (Hyperparams.realGravity ? 1 : 2) * Hyperparams.gravity) {
-                    const c = food.col;
-                    const r = food.row;
                     if (this.grid_map.isValidLoc(c, r+1) && this.grid_map.cellAt(c, r+1).state === CellStates.empty) {
                         this.changeCell(c, r, CellStates.empty, null);
                         this.foods.delete(food);
                         this.changeCell(c, r+1, CellStates.food, null);
                         this.foods.add(this.grid_map.cellAt(c, r+1));
+                    }
+                }
+                else if (Math.random() * 100 <= Math.abs(Hyperparams.current)) {
+                    const sign = Math.sign(Hyperparams.current);
+                    if (this.grid_map.isValidLoc(c+sign, r) && this.grid_map.cellAt(c+sign, r).state === CellStates.empty) {
+                        this.changeCell(c, r, CellStates.empty, null);
+                        this.foods.delete(food);
+                        this.changeCell(c+sign, r, CellStates.food, null);
+                        this.foods.add(this.grid_map.cellAt(c+sign, r));
                     }
                 }
             }

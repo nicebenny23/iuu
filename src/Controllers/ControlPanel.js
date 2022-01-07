@@ -252,6 +252,12 @@ class ControlPanel {
         $('#real-gravity').change(function() {
             Hyperparams.realGravity = this.checked;
         });
+        $('#current').change(function() {
+            Hyperparams.current = $('#current').val();
+        }.bind(this));
+        $('#alter-current').change(function() {
+            Hyperparams.alterCurrent = this.checked;
+        });
         $('#lifespan-multiplier').change(function() {
             Hyperparams.lifespanMultiplier = $('#lifespan-multiplier').val();
         }.bind(this));
@@ -346,6 +352,8 @@ class ControlPanel {
         $('#vert-ext-coef').val(Hyperparams.vertExtCoef);
         $('#gravity').val(Hyperparams.gravity);
         $('#real-gravity').prop('checked', Hyperparams.realGravity);
+        $('#current').val(Hyperparams.current);
+        $('#alter-current').prop('checked', Hyperparams.alterCurrent);
         $('#lifespan-multiplier').val(Hyperparams.lifespanMultiplier);
         $('#rot-enabled').prop('checked', Hyperparams.rotationEnabled);
         $('#insta-kill').prop('checked', Hyperparams.instaKill);

@@ -316,8 +316,11 @@ class Organism {
             }
         }
 
-        if (gravity && Math.random() * 100 <= (Hyperparams.realGravity ? 1 : this.anatomy.cells.length) * Hyperparams.gravity) {
+        if (Hyperparams.gravity && Math.random() * 100 <= (Hyperparams.realGravity ? 1 : this.anatomy.cells.length) * Hyperparams.gravity) {
             this.attemptChangePosition(this.c, this.r + 1);
+        }
+        else if (Hyperparams.current && Math.random() * 100 <= Math.abs(Hyperparams.current) / this.anatomy.cells.length) {
+            this.attemptChangePosition(this.c + Math.sign(Hyperparams.current), this.r);
         }
 
         return this.living;
