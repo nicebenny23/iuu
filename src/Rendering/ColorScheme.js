@@ -11,6 +11,7 @@ class ColorScheme {
             "food":"#2F7AB7",
             "wall":"#808080",
             "mouth":"#DEB14D",
+            "wall_extractor":"#78602A",
             "producer":"#15DE59",
             "mover":"#60D4FF",
             "killer":"#F82380",
@@ -27,6 +28,7 @@ class ColorScheme {
         $('#food-color').val(this.color_scheme["food"]);
         $('#wall-color').val(this.color_scheme["wall"]);
         $('#mouth-color').val(this.color_scheme["mouth"]);
+        $('#wall-extractor-color').val(this.color_scheme["wall_extractor"]);
         $('#producer-color').val(this.color_scheme["producer"]);
         $('#mover-color').val(this.color_scheme["mover"]);
         $('#killer-color').val(this.color_scheme["killer"]);
@@ -50,6 +52,7 @@ class ColorScheme {
         this.color_scheme["food"] = $('#food-color').val();
         this.color_scheme["wall"] = $('#wall-color').val();
         this.color_scheme["mouth"] = $('#mouth-color').val();
+        this.color_scheme["wall_extractor"] = $('#wall-extractor-color').val();
         this.color_scheme["producer"] = $('#producer-color').val();
         this.color_scheme["mover"] = $('#mover-color').val();
         this.color_scheme["killer"] = $('#killer-color').val();

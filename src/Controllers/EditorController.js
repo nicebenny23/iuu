@@ -62,6 +62,9 @@ class EditorController extends CanvasController{
                 case "mouth":
                     self.edit_cell_type = CellStates.mouth;
                     break;
+                case "wall_extractor":
+                    self.edit_cell_type = CellStates.wall_extractor;
+                    break;
                 case "producer":
                     self.edit_cell_type = CellStates.producer;
                     break;
